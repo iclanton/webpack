@@ -9732,6 +9732,7 @@ declare interface LoaderRunnerLoaderContext<OptionsType> {
 	/**
 	 * An array of all the loaders. It is writeable in the pitch phase.
 	 * loaders = [{request: string, path: string, query: string, module: function}]
+	 *
 	 * In the example:
 	 * [
 	 *   { request: "/abc/loader1.js?xyz",
@@ -18759,12 +18760,12 @@ declare interface _functionWebpack {
 	(
 		options: Configuration,
 		callback: CallbackWebpackFunction_2<Stats, void>
-	): null | Compiler;
+	): null;
 	(options: Configuration): Compiler;
 	(
 		options: MultiConfiguration,
 		callback: CallbackWebpackFunction_2<MultiStats, void>
-	): null | MultiCompiler;
+	): null;
 	(options: MultiConfiguration): MultiCompiler;
 }
 declare interface chunkModuleHashMap {
@@ -18774,12 +18775,12 @@ declare interface chunkModuleHashMap {
 declare function exports(
 	options: Configuration,
 	callback: CallbackWebpackFunction_2<Stats, void>
-): null | Compiler;
+): null;
 declare function exports(options: Configuration): Compiler;
 declare function exports(
 	options: MultiConfiguration,
 	callback: CallbackWebpackFunction_2<MultiStats, void>
-): null | MultiCompiler;
+): null;
 declare function exports(options: MultiConfiguration): MultiCompiler;
 declare namespace exports {
 	export const webpack: _functionWebpack;
